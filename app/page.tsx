@@ -95,41 +95,6 @@ export default function Home() {
             </CardContent>
           </Card>
         </div>
-
-        <div className="mt-20">
-          <h2 className="text-3xl font-bold text-center mb-12 gradient-text">Active Elections</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="card-hover border-vote-green/20 dark:border-vote-green/30 bg-white/80 dark:bg-card/80 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="text-vote-green">Community Council Election</CardTitle>
-                <CardDescription>Ends in 3 days</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p>Vote for representatives to serve on the community council for the next term.</p>
-              </CardContent>
-              <CardFooter>
-                <Button asChild className="bg-vote-green hover:bg-vote-green/90">
-                  <Link href="/vote/1">Vote Now</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-
-            <Card className="card-hover border-vote-orange/20 dark:border-vote-orange/30 bg-white/80 dark:bg-card/80 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="text-vote-orange">Protocol Upgrade Proposal</CardTitle>
-                <CardDescription>Ends in 5 days</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p>Vote on the proposed changes to the network protocol.</p>
-              </CardContent>
-              <CardFooter>
-                <Button asChild className="bg-vote-orange hover:bg-vote-orange/90">
-                  <Link href="/vote/2">Vote Now</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-          </div>
-        </div>
       </div>
     </div>
   )
