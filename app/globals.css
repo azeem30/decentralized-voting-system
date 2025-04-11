@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 262 83% 58%;
+    --radius: 0.75rem;
+
+    /* Custom theme colors */
+    --vote-purple: 262 83% 58%;
+    --vote-blue: 217 91% 60%;
+    --vote-teal: 186 94% 41%;
+    --vote-green: 142 71% 45%;
+    --vote-yellow: 47 96% 53%;
+    --vote-orange: 27 96% 61%;
+    --vote-red: 0 84% 60%;
+    --vote-pink: 330 81% 60%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 6.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 6.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 262 83% 62%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 262 83% 62%;
+
+    /* Custom theme colors - darker variants */
+    --vote-purple: 262 83% 62%;
+    --vote-blue: 217 91% 65%;
+    --vote-teal: 186 94% 46%;
+    --vote-green: 142 71% 50%;
+    --vote-yellow: 47 96% 58%;
+    --vote-orange: 27 96% 66%;
+    --vote-red: 0 84% 65%;
+    --vote-pink: 330 81% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles */
+.gradient-bg {
+  @apply bg-gradient-to-br from-vote-purple/10 via-vote-blue/5 to-vote-teal/10 dark:from-vote-purple/20 dark:via-vote-blue/10 dark:to-vote-teal/20;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-vote-purple via-vote-blue to-vote-teal bg-clip-text text-transparent;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-vote-purple/10 dark:hover:shadow-vote-purple/20;
+}
+
+.theme-transition {
+  @apply transition-colors duration-300;
+}
